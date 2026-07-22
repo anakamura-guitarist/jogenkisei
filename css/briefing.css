@@ -385,24 +385,33 @@ header.pageHeader h1.logo span a {
 
 .kv {
   width: 100%;
-  height: 49rem;
+  height: 38.6vw;
   position: relative;
-  background: #F2F2F2;
+  background: url("../images/kv_top.webp") no-repeat;
+  background-size: 100%;
+}
+@media screen and (min-width: 1440px) {
+  .kv {
+    height: 55.6rem;
+  }
 }
 @media screen and (max-width: 767px) {
   .kv {
-    height: 60rem;
+    height: 102.2rem;
+    background: url("../images/kv_top_sp.webp") no-repeat #C0DAFF;
+    background-position: top center;
+    background-size: 100%;
   }
 }
 .kv .inner {
   width: 100%;
   height: 100%;
-  max-width: 1160px;
   padding: 0 20px;
   margin: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   .kv .inner {
@@ -411,21 +420,40 @@ header.pageHeader h1.logo span a {
   }
 }
 .kv .inner .headCopy {
-  position: relative;
+  position: absolute;
+  top: 4.8vw;
+  left: 50%;
+  transform: translateX(-23vw);
   z-index: 2;
-}
-.kv .inner .headCopy p.lead {
-  font-size: 1.14vw;
-  line-height: 2.08vw;
-  font-weight: 500;
-  margin-top: 1.35vw;
-  color: #CCCCCC;
+  writing-mode: vertical-rl;
 }
 @media screen and (max-width: 767px) {
-  .kv .inner .headCopy p.lead {
-    margin-top: 4rem;
-    font-size: 2.143rem;
-    line-height: 3.8rem;
+  .kv .inner .headCopy {
+    top: 6vw;
+    left: 6rem;
+    transform: translateX(0);
+  }
+}
+.kv .inner p.lead {
+  font-size: 1.11vw;
+  line-height: 2.6vw;
+  font-weight: 500;
+  color: #000;
+  position: absolute;
+  top: 10vw;
+  left: 50%;
+  transform: translateX(13vw);
+  font-feature-settings: "palt";
+}
+@media screen and (max-width: 767px) {
+  .kv .inner p.lead {
+    margin: auto;
+    margin-top: 75rem;
+    font-size: 2.8rem;
+    line-height: 5rem;
+    position: static;
+    transform: translateX(0);
+    text-align: center;
   }
 }
 
@@ -853,25 +881,66 @@ span.hissu {
   /* 擬似要素（白背景）の基準位置にする */
   display: table;
   /* 文字の長さに幅を合わせる */
-  margin-bottom: 0.31vw;
+  margin-bottom: 0;
   /*0.9rem*/
   /* 行間の余白 */
   font-weight: bold;
-  font-size: 6.059rem;
-  line-height: 7.087rem;
-  padding: 0.15vw 0.26vw;
+  font-size: 2.1vw;
+  /*3.049rem*/
+  line-height: 3.88vw;
+  /*5.589rem*/
+  padding: 0 0 0 0.69vw;
   /*0.1rem 0.4rem*/
   /* 文字の周りの余白 */
-  color: #CCCCCC;
+  color: #000;
   font-feature-settings: "palt";
+}
+.catch span {
+  color: #DC0064;
+}
+.catch.catch01 {
+  background: url("../images/bg_catch01.webp") no-repeat;
+  background-size: 0.7vw;
+  background-position: top 0.1rem left;
+}
+@media screen and (max-width: 767px) {
+  .catch.catch01 {
+    background: url("../images/bg_catch01_sp.webp") no-repeat;
+    background-size: 1.573rem;
+  }
+}
+.catch.catch02 {
+  background: url("../images/bg_catch02.webp") no-repeat;
+  background-size: 0.7vw;
+  background-position: top 0.1rem left;
+}
+@media screen and (max-width: 767px) {
+  .catch.catch02 {
+    background: url("../images/bg_catch02_sp.webp") no-repeat;
+    background-size: 1.573rem;
+    letter-spacing: -0.1rem !important;
+  }
+}
+.catch.catch03 {
+  background: url("../images/bg_catch03.webp") no-repeat;
+  background-size: 0.7vw;
+  background-position: top 0.1rem left;
+}
+@media screen and (max-width: 767px) {
+  .catch.catch03 {
+    background: url("../images/bg_catch03_sp.webp") no-repeat;
+    background-size: 1.573rem;
+    letter-spacing: 0 !important;
+  }
 }
 @media screen and (max-width: 767px) {
   .catch {
-    font-size: 6.49rem;
-    line-height: 7.5rem;
-    padding: 0.5rem;
-    letter-spacing: -0.1rem;
+    font-size: 4.72rem;
+    line-height: 8.654rem;
+    padding: 0 0 0 0.5rem;
+    letter-spacing: 0.6rem;
     margin-bottom: 0.9rem;
+    margin-left: -0.5rem;
   }
 }
 
@@ -879,6 +948,11 @@ section.outline {
   width: 100%;
   background: #fff;
   padding: 6.6rem 0 9.7rem;
+}
+@media screen and (max-width: 767px) {
+  section.outline {
+    padding: 15rem 0 9.7rem;
+  }
 }
 section.outline .inner {
   width: 112rem;
@@ -898,6 +972,7 @@ section.outline .inner h2 {
   gap: 1rem;
   margin-bottom: 1.9rem;
   letter-spacing: -0.4rem;
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   section.outline .inner h2 {
@@ -906,6 +981,22 @@ section.outline .inner h2 {
     text-align: center;
     flex-direction: column;
     margin-bottom: 3rem;
+  }
+}
+section.outline .inner h2::before {
+  content: '厚生労働省委託事業';
+  font-size: 1.8rem;
+  color: #333;
+  position: absolute;
+  top: -1.2rem;
+  left: 18.5rem;
+  letter-spacing: 0;
+}
+@media screen and (max-width: 767px) {
+  section.outline .inner h2::before {
+    font-size: 2rem;
+    top: -2.7rem;
+    left: 8rem;
   }
 }
 @media screen and (max-width: 767px) {
