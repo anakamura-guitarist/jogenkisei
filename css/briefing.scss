@@ -360,7 +360,7 @@ header.pageHeader {
 	
 	
 	h1.logo {
-		width:58rem;/* 55.2rem */
+		width:58.4rem;/* 55.2rem */
 		position: absolute;
 		top:1.5rem;/*2rem*/
 		left:4rem;
@@ -424,7 +424,7 @@ header.pageHeader {
 	background-size:100%;
 	
 	@media screen and (min-width: 1440px) {
-		height:55.6rem;
+		//height:55.6rem;
 	}
 	
 	@media screen and (max-width: 767px) {
@@ -474,7 +474,7 @@ header.pageHeader {
 			
 		}
 		
-		p.lead {
+		p.lead.top {
 			font-size:1.11vw;
 			line-height:2.6vw;
 			font-weight:500;
